@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My profile</title>
+    <link rel="stylesheet" href="jkuat.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="jkuatimgs/pretty.jpg" alt="Profile image">
+            <h1>Hi, I'm Amal!</h1>
+            <p>Aspiring Software Developer | Bachelor of Information Technology Student</p>
+        </div>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm Amal, a second-year BIT student passionate about technology and coding. My goal is to become
+                a skilled software developer and create innovative solutions that make an impact. I love learning
+                new technologies and working on hands-on projects.
+            </p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming: Python, JavaScript</li>
+                <li>Web Development: HTML, CSS</li>
+                <li>Version Control: Git</li>
+                <li>Problem Solving</li>
+                <li>Team Collaboration</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <img src="jkuatimgs/bg.jpg" alt="Project 1 Screenshot">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A responsive personal portfolio website showcasing my skills, projects, and contact information.
+                </p>
+                <!-- <a href="https://yourportfolio.com" target="_blank">View Project</a> -->
+            </div>
+            <div class="project">
+                <img src="jkuatimgs/wallpaper.jpg" alt="Project 1 Screenshot">
+                <h3>To-Do List App</h3>
+                <p>
+                    A functional to-do list application that allows users to add, edit, and delete tasks.
+                </p>
+                <!-- <a href="https://github.com/yourusername/todo-list-app" target="_blank">GitHub Repo</a> -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to connect or collaborate, feel free to reach out!</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+                <p id="error-message" style="color: red; display: none;">Please fill out all fields correctly.</p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Amal's Portfolio | All Rights Reserved</p>
+    </footer>
+    <script src="script.js">
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const errorMessage = document.getElementById('error-message');
+
+    if (!name || !email.includes('@') || !message) {
+        errorMessage.style.display = 'block';
+    } else {
+        errorMessage.style.display = 'none';
+        alert('Thank you for reaching out!');
+    }
+});
+    </script>
+
+
+
+    
+</body>
+</html>
